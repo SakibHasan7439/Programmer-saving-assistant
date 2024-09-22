@@ -9,38 +9,38 @@
 </head>
 <body>
     <div class="w-[425px] bg-white mx-auto mt-[10%] border-2 border-red rounded-md shadow-md p-8">
-        <div id="grand-parent">
             <h2 class="text-center text-2xl font-bold text-blue-700 mb-2">Programmer Expense Assistant</h2>
-            <div id="section-select-btn" class="flex justify-between items-center mb-4">
-                <button class="bg-blue-700 text-white font-semibold px-12 py-2 rounded-l-md">Assistant</button>
-                <button class="px-12 py-2 font-semibold">History</button>
+            <div class="flex justify-between items-center mb-4">
+                <button  id="assistant-btn" class="bg-blue-700 text-white font-semibold px-14 py-2 rounded-l-md">Assistant</button>
+                <button id="history" class="px-14 py-2 font-semibold">History</button>
             </div>
 
-            <label class="font-bold pb-2">Income</label>
-            <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="Income" id="income" placeholder="Enter income">
-
-            <div class="flex justify-between items-center gap-3 mb-3">
-                <div>
-                    <label class="font-bold pb-2">Software</label>
-                    <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="software" id="software" placeholder="Software Cost">
-                </div>
-                <div>
-                    <label class="font-bold pb-2 mb-2">Course</label>
-                    <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="course" id="course" placeholder="Course Cost">
-                </div>
-            </div>
-
-            <label class="font-bold">Internet</label>
-            <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-4" type="number" name="internet" id="internet" placeholder="Internet Cost">
-        </div>
-
-        <button id="calculate" class="w-full mb-4 text-white rounded-md bg-blue-700 px-12 py-1">Calculate</button>
-
-        <label class="font-bold pb-2">Saving (%)</label>
-        <input class="border-2 w-full px-4 py-1 outline-none rounded-md mb-4" type="number" name="saving" id="saving" placeholder="Saving %">
-
-        <button id="calculate-saving" class="w-full mb-4 text-white rounded-md bg-green-600 px-12 py-1">Calculate Saving</button>
-        
+            <div id="calculate-section">
+              <label class="font-bold pb-2">Income 💰 </label>
+              <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="Income" id="income" placeholder="Enter income">
+  
+              <div class="flex justify-between items-center gap-3 mb-3">
+                  <div>
+                      <label class="font-bold pb-2">Software 🖥  </label>
+                      <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="software" id="software" placeholder="Software Cost">
+                  </div>
+                  <div>
+                      <label class="font-bold pb-2 mb-2">Course 📚 </label>
+                      <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="course" id="course" placeholder="Course Cost">
+                  </div>
+                  </div>
+      
+                  <label class="font-bold">Internet 🌐</label>
+                  <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-4" type="number" name="internet" id="internet" placeholder="Internet Cost">
+              
+      
+              <button id="calculate" class="w-full mb-4 text-white rounded-md bg-blue-700 px-12 py-1">Calculate</button>
+      
+              <label class="font-bold pb-2">Saving (%)</label>
+              <input class="border-2 w-full px-4 py-1 outline-none rounded-md mb-4" type="number" name="saving" id="saving" placeholder="Saving %">
+      
+              <button id="calculate-saving" class="w-full mb-4 text-white rounded-md bg-green-600 px-12 py-1">Calculate Saving</button>
+          </div>
 
           <!-- Results -->
           <div
