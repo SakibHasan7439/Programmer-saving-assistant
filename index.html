@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Expense Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="w-[425px] bg-white mx-auto mt-[10%] border-2 border-red rounded-md shadow-md p-8">
+        <div id="grand-parent">
+            <h2 class="text-center text-2xl font-bold text-blue-700 mb-2">Programmer Expense Assistant</h2>
+            <div id="section-select-btn" class="flex justify-between items-center mb-4">
+                <button class="bg-blue-700 text-white font-semibold px-12 py-2 rounded-l-md">Assistant</button>
+                <button class="px-12 py-2 font-semibold">History</button>
+            </div>
+
+            <label class="font-bold pb-2">Income</label>
+            <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="Income" id="income" placeholder="Enter income">
+
+            <div class="flex justify-between items-center gap-3 mb-3">
+                <div>
+                    <label class="font-bold pb-2">Software</label>
+                    <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="software" id="software" placeholder="Software Cost">
+                </div>
+                <div>
+                    <label class="font-bold pb-2 mb-2">Course</label>
+                    <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-2" type="number" name="course" id="course" placeholder="Course Cost">
+                </div>
+            </div>
+
+            <label class="font-bold">Internet</label>
+            <input class="w-full border-2 py-1 px-2 outline-none rounded-md mb-4" type="number" name="internet" id="internet" placeholder="Internet Cost">
+        </div>
+
+        <button id="calculate" class="w-full mb-4 text-white rounded-md bg-blue-700 px-12 py-1">Calculate</button>
+
+        <label class="font-bold pb-2">Saving (%)</label>
+        <input class="border-2 w-full px-4 py-1 outline-none rounded-md mb-4" type="number" name="saving" id="saving" placeholder="Saving %">
+
+        <button id="calculate-saving" class="w-full mb-4 text-white rounded-md bg-green-600 px-12 py-1">Calculate Saving</button>
+        
+
+          <!-- Results -->
+          <div
+          id="results"
+          class="mt-8 hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+        >
+          <h3
+            class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+          >
+            Results Summary
+          </h3>
+          <div class="grid grid-cols-2 gap-3">
+            <div
+              class="bg-white p-3 rounded-md shadow-sm border-l-2 border-blue-500"
+            >
+              <p class="text-xs text-gray-500">Total Expenses</p>
+              <p class="text-sm font-bold text-gray-800">
+                ৳<span id="total-expenses">00</span>
+              </p>
+            </div>
+            <div
+              class="bg-white p-3 rounded-md shadow-sm border-l-2 border-green-500"
+            >
+              <p class="text-xs text-gray-500">Balance</p>
+              <p class="text-sm font-bold text-gray-800">
+                ৳<span id="balance">00</span>
+              </p>
+            </div>
+            <div
+              class="bg-white p-3 rounded-md shadow-sm border-l-2 border-purple-500"
+            >
+              <p class="text-xs text-gray-500">Savings Amount</p>
+              <p class="text-sm font-bold text-gray-800">
+                ৳<span id="savings-amount">00</span>
+              </p>
+            </div>
+            <div
+              class="bg-white p-3 rounded-md shadow-sm border-l-2 border-yellow-500"
+            >
+              <p class="text-xs text-gray-500">Remaining Balance</p>
+              <p class="text-sm font-bold text-gray-800">
+                ৳<span id="remaining-balance">00</span>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Error Messages -->
+        <p id="logic-error" class="text-red-500 mt-4 hidden text-center">
+          ⚠️ Total expenses cannot exceed your income!
+        </p>
+
+        <!-- History Section -->
+        <div
+          id="history-section"
+          class="bg-gradient-to-br hidden from-blue-50 to-purple-50 p-4 rounded-lg shadow-md border border-blue-200"
+        >
+          <h3
+            class="text-lg font-semibold mb-4 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"
+          >
+            🕒 Expense History
+          </h3>
+          <div id="history-list" class="grid grid-cols-2 gap-3"></div>
+        </div>
+      </div>
+    </div>
+    <script src="js/utilities.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
